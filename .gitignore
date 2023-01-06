@@ -1,3 +1,6 @@
 *.o
 *.diff
 *.rej
+st
+*.orig
+config.h
