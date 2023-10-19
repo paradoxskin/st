@@ -5,10 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SauceCodePro Nerd Font:pixelsize=20:antialias=false:autohint=true";
+static char *font = "SauceCodeProNerdFont:pixelsize=20:antialias=true:autohint=true";
 //static char *font = "PICO\\-8:pixelsize=22:style=Regular";
 /* Spare fonts */
 static char *font2[] = {
+    "Heiti J:pixelsize=20:antialias=true:autohint=true",
+    "PICO\\-8:pixelsize=22:style=Regular"
 	//"SauceCodePro Nerd Font:pixelsize=20:autialias=false:autohint=false",
 };
 /*
