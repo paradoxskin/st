@@ -2,3 +2,4 @@
 *.rej
 st
 *.orig
+.ccls-cache

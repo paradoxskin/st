@@ -9,7 +9,7 @@ static char *font = "SauceCodeProNerdFont:pixelsize=20:antialias=true:autohint=t
 //static char *font = "PICO\\-8:pixelsize=22:style=Regular";
 /* Spare fonts */
 static char *font2[] = {
-    "Heiti J:pixelsize=20:antialias=true:autohint=true",
+    //"Heiti J:pixelsize=20:antialias=true:autohint=true",
     "PICO\\-8:pixelsize=22:style=Regular"
 	//"SauceCodePro Nerd Font:pixelsize=20:autialias=false:autohint=false",
 };
