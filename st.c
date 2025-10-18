@@ -1413,7 +1413,7 @@ tsetattr(const int *attr, int l)
 {
 	int i;
 	int32_t idx;
-
+        static char enhance = 0;
 	for (i = 0; i < l; i++) {
 		switch (attr[i]) {
 		case 0:
@@ -1428,9 +1428,14 @@ tsetattr(const int *attr, int l)
 				ATTR_STRUCK     );
 			term.c.attr.fg = defaultfg;
 			term.c.attr.bg = defaultbg;
+			enhance = 0;
 			break;
 		case 1:
 			term.c.attr.mode |= ATTR_BOLD;
+			enhance = 1;
+			if (term.c.attr.fg < 8) {
+				term.c.attr.fg |= 8;
+			}
 			break;
 		case 2:
 			term.c.attr.mode |= ATTR_FAINT;
@@ -1492,7 +1497,7 @@ tsetattr(const int *attr, int l)
 			break;
 		default:
 			if (BETWEEN(attr[i], 30, 37)) {
-				term.c.attr.fg = attr[i] - 30;
+				term.c.attr.fg = (attr[i] - 30) + (enhance * 8);
 			} else if (BETWEEN(attr[i], 40, 47)) {
 				term.c.attr.bg = attr[i] - 40;
 			} else if (BETWEEN(attr[i], 90, 97)) {
